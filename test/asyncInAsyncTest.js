@@ -10,8 +10,7 @@ async function a() {
     async function b(dirpath) {
         return new Promise(function (resolve, reject) {
             try {
-                await
-                fs.mkdirAsync(dirpath);
+              await fs.mkdirAsync(dirpath);
             } catch (e) {
                 console.log(e);
             }
