@@ -1,4 +1,3 @@
-var {news, dataScope } = require('./exportsTest');
 let data = [{
     "couponno": "1-6806961797",
     "promotionname": "【JJ】400-40元官网优惠券",
@@ -41,5 +40,15 @@ let data = [{
     "label": null
 }];
 
-console.log(news)
-console.log(dataScope(data));
+// 时间点开始时间小于当天的时间，结束时间大于当天时间的。
+exports.dataScope=(data) => data.filter(item =>
+    new Date(item.startdate).getTime() <= new Date().getTime() && new Date(item.enddate).getTime() >= new Date(new Date().toLocaleDateString()).getTime()
+)
+
+
+console.log(new Date(data[0].startdate).getTime() <= new Date().getTime())
+console.log(new Date(data[0].enddate).getTime() >= new Date(new Date().toLocaleDateString()).getTime());
+console.log(new Date(data[0].enddate).getTime())
+console.log(new Date().toLocaleDateString())
+console.log(new Date(new Date().toLocaleDateString()).getTime())
+
