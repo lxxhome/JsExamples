@@ -1,54 +1,81 @@
-let data = [{
-    "couponno": "1-6806961797",
-    "promotionname": "【JJ】400-40元官网优惠券",
-    "status": "未使用",
-    "promid": "2CR11904101",
-    "startdate": "06/05/2019",
-    "enddate": "07/08/2019",
-    "channel": "H5|PC|小程序",
-    "brand": "JACK & JONES",
-    "label": null
-}, {
-    "couponno": "1-6806839061",
-    "promotionname": "【JJ】600-60元官网优惠券",
-    "status": "未使用",
-    "promid": "2CR11904102",
-    "startdate": "06/05/2019",
-    "enddate": "06/21/2019",
-    "channel": "H5|PC|小程序",
-    "brand": "JACK & JONES",
-    "label": null
-}, {
-    "couponno": "1-6806981573",
-    "promotionname": "【JJ】1000-120元官网优惠券",
-    "status": "未使用",
-    "promid": "2CR11904104",
-    "startdate": "07/05/2019",
-    "enddate": "07/09/2019",
-    "channel": "H5|PC|小程序",
-    "brand": "JACK & JONES",
-    "label": null
-}, {
-    "couponno": "1-6806917737",
-    "promotionname": "【JJ】800-80元官网优惠券",
-    "status": "未使用",
-    "promid": "2CR11904103",
-    "startdate": "06/05/2019",
-    "enddate": "06/21/2019",
-    "channel": "H5|PC|小程序",
-    "brand": "JACK & JONES",
-    "label": null
-}];
+let data = [
+    {
+        "couponno": "3-691749923",
+        "promotionname": "20190905测试期间券（领券时间在促销开始时间之后）",
+        "status": "未使用",
+        "promid": "1CR11901067",
+        "startdate": "10/17/2019 18:21:59",
+        "enddate": "11/18/2019 16:21:59",
+        "channel": "通用",
+        "brand": "ONLY",
+        "label": null
+    },
+    {
+        "couponno": "3-691749933",
+        "promotionname": "7元测试券",
+        "status": "未使用",
+        "promid": "1CR11901083",
+        "startdate": "10/17/2019 18:26:02",
+        "enddate": "10/20/2019 23:59:59",
+        "channel": "H5|门店|通用",
+        "brand": "ONLY",
+        "label": null
+    },
+    {
+        "couponno": "3-691770019",
+        "promotionname": "7元测试券",
+        "status": "未使用",
+        "promid": "1CR11901083",
+        "startdate": "10/17/2019 18:27:46",
+        "enddate": "10/20/2019 23:59:59",
+        "channel": "H5|门店|通用",
+        "brand": "ONLY",
+        "label": null
+    },
+    {
+        "couponno": "3-691770001",
+        "promotionname": "1.5元1016测试券",
+        "status": "未使用",
+        "promid": "1CR11901084",
+        "startdate": "10/17/2019 14:26:21",
+        "enddate": "10/20/2019 23:59:59",
+        "channel": "H5|门店|通用",
+        "brand": "ONLY",
+        "label": null
+    },
+    {
+        "couponno": "3-691770004",
+        "promotionname": "2元1017测试券",
+        "status": "未使用",
+        "promid": "1CR11901085",
+        "startdate": "10/17/2019 14:26:29",
+        "enddate": "10/20/2019 23:59:59",
+        "channel": "H5|通用|门店",
+        "brand": "ONLY",
+        "label": null
+    }
+];
 
 // 时间点开始时间小于当天的时间，结束时间大于当天时间的。
-exports.dataScope=(data) => data.filter(item =>
-    new Date(item.startdate).getTime() <= new Date().getTime() && new Date(item.enddate).getTime() >= new Date(new Date().toLocaleDateString()).getTime()
+let b=data.filter(item =>
+    new Date(item.startdate).getTime() <= new Date().getTime() && new Date(item.enddate).getTime() >= new Date().getTime()
 )
 
+console.log(b);
 
-console.log(new Date(data[0].startdate).getTime() <= new Date().getTime())
-console.log(new Date(data[0].enddate).getTime() >= new Date(new Date().toLocaleDateString()).getTime());
-console.log(new Date(data[0].enddate).getTime())
-console.log(new Date().toLocaleDateString())
-console.log(new Date(new Date().toLocaleDateString()).getTime())
+
+// console.log(new Date(data[0].startdate).getTime() <= new Date().getTime())
+// console.log(new Date(data[0].enddate).getTime() >= new Date().getTime());
+// console.log(new Date(data[0].enddate).getTime())
+// console.log(new Date().toLocaleDateString())
+// console.log(new Date(new Date().toLocaleDateString()).getTime())
+
+// let endDate=new Date(new Date().toLocaleDateString()).getTime()
+// let time=new Date().getTime()
+// console.log(time);
+// console.log(endDate);
+
+
+
+
 
