@@ -1,7 +1,7 @@
 
 let list=[
-    {email:'lxx'},
-    {email:'bzy'},
+    {email:'xx'},
+    {email:'by'},
     {email:'wry'},
     {email:'sss'}
 ]
