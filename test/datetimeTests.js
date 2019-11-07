@@ -11,9 +11,9 @@ let date5=new Date(new Date()-24*60*60*1000);
 // let date6=new Date()-1;
 let date7=new Date(new Date().setHours(24,0,0,0))-new Date();
 
-let date8=new Date().setHours(24,0,0);
+let date8=new Date().setHours(24,0,0,0);
 
-console.log(date4)
+console.log(date8)
 console.log(date5);
 console.log(date7);
 console.log(date9)
