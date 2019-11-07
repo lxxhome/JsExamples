@@ -1,11 +1,11 @@
 let body = {
-    "skuCodes": ["218425519F38", "218425519E09", "218425519E13", "218425519E39"]
+    "codes": ["19F38", "19E09", "519E13", "19E39"]
 }
 
-let skuCode = body.skuCodes;
+let skuCode = body.codes;
 
 let msg = '';
-skuCode.forEach(sku => {
+code.forEach(sku => {
     if (sku.indexOf('F') > 0) {
         msg += sku;
     }
