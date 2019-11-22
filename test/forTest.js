@@ -91,10 +91,10 @@ let res = [{
 }]
 
 for (let good in res) {
-    console.log(good);
+    console.log(good); // 输出为索引项0，1，2，3……
     // 取出当前奖项的数据区域，例：1-1000为apple,1001-2000为gap.
-    let minNum = res[good]["startIndex"];
-    let maxNum = res[good].endIndex;
+    let minNum = res[good]["startIndex"];  //expected out 1,1001,2001……
+    let maxNum = res[good].endIndex; // expected out 1000,2000,3000……
 
     console.log(minNum,maxNum);
 }
