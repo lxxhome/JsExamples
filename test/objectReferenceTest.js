@@ -5,7 +5,9 @@ let order=body;
  order.orderToken='1232324';
  console.log(body); // { data: { name: 'test' }, orderToken: '1232324' }
  console.log(order); // { data: { name: 'test' }, orderToken: '1232324' }
- delete body.orderToken;
+//  delete body.orderToken;
+ console.log(delete body);
+ delete order;
  console.log(body); // { data: { name: 'test' } }
  console.log(order); // { data: { name: 'test' } }
 
