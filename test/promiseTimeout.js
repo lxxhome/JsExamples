@@ -1,7 +1,34 @@
-function saySomething(str)
-{
-    console.log(str);
+// function saySomething(str)
+// {
+//     console.log(str);
+// }
+// setTimeout(()=>saySomething("3 seconds passed"),1000);
+// const wait =ms=>new Promise(resolve=>setTimeout(resolve,ms));
+// wait(2000).then(()=>saySomething("3 seconds")).catch(()=>{console.log('failed;')});
+
+
+
+
+function test(resolve, reject) {
+    var timeOut = Math.random() * 2;
+    console.log('set timeout to: ' + timeOut + ' seconds.');
+    setTimeout(function () {
+        if (timeOut < 1) {
+            console.log('call resolve()...');
+            resolve('200 OK');
+        }
+        else {
+            console.log('call reject()...');
+            reject('timeout in ' + timeOut + ' seconds.');
+        }
+    }, timeOut * 1000);
 }
-setTimeout(()=>saySomething("3 seconds passed"),1000);
-const wait =ms=>new Promise(resolve=>setTimeout(resolve,ms));
-wait(2000).then(()=>saySomething("3 seconds")).catch(()=>{console.log('failed;')});
+
+
+var p1 = new Promise(test);
+var p2 = p1.then(function (result) {
+    console.log('成功：' + result);
+});
+var p3 = p2.catch(function (reason) {
+    console.log('失败：' + reason);
+});
