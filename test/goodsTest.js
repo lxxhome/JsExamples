@@ -5,4 +5,3 @@ if (Sku.includes('319.json')) {
 } else {
     console.log('false');
 }
-
