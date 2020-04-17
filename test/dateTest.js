@@ -1,2 +1,2 @@
-let date=new Date('2019-11-21 23:11:33').toLocaleDateString();
-console.log(date);
+let date=new Date().toLocaleDateString();
+let date2=new Date().toLocaleString();
